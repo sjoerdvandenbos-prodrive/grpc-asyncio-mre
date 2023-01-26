@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package minimumreproducibleexample;
+
+service PublicService {
+    rpc DoPublicRequest(PublicRequest) returns (PublicResponse);
+}
+
+service HiddenService {
+    rpc DoHiddenRequest(HiddenRequest) returns (HiddenResponse);
+}
+
+message PublicRequest {
+    string message = 1;
+}
+
+message PublicResponse {
+    string message = 1;
+}
+
+message HiddenRequest {
+    string message = 1;
+}
+
+message HiddenResponse {
+    string message = 1;
+}
