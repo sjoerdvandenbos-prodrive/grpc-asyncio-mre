@@ -12,7 +12,7 @@ async def do_request():
         stub = PublicServiceStub(channel)
         request = PublicRequest(message="Hi.")
         response = await stub.DoPublicRequest(request)
-        logging.info("response")
+        logging.info(response)
 
 
 if __name__ == "__main__":
